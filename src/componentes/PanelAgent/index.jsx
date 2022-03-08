@@ -21,8 +21,8 @@ export default function PanelAgent({ agent }) {
   };
 
   const [input, setInput] = useState({
-    name: "Dairo",
-    email: "garcianaranjodairo@gmail.com",
+    name: "Car",
+    email: "carlafaes18@hotmail.com",
     agentID: 123,
   });
 
