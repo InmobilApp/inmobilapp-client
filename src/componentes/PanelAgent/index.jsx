@@ -21,8 +21,8 @@ export default function PanelAgent({ agent }) {
   };
 
   const [input, setInput] = useState({
-    name: "Car",
-    email: "carlafaes18@hotmail.com",
+    name: "Dairo",
+    email: "garcianaranjodairo@gmail.com",
     agentID: 123,
   });
 
@@ -36,7 +36,7 @@ export default function PanelAgent({ agent }) {
           onClick={() =>
             seAlquiloPropiedad(
               "Carla",
-              "garcianaranjodairo@gmail.com",
+              "carlafaes18hotmail.com",
               agent.properties[0]
             )
           }
