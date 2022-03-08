@@ -36,7 +36,7 @@ export default function PanelAgent({ agent }) {
           onClick={() =>
             seAlquiloPropiedad(
               "Carla",
-              "carlafaes18hotmail.com",
+              "carlafaes18@hotmail.com",
               agent.properties[0]
             )
           }
