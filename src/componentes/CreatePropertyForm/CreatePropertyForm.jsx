@@ -132,7 +132,7 @@ export default function CreatePropertyForm() {
         return err;
       }}
       onSubmit={(values, { resetForm }) => {
-        /* resetForm(); */
+        resetForm();
         if (
           !formErrors.type &&
           !formErrors.city &&

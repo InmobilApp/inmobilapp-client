@@ -93,10 +93,7 @@ function PropertyDetails(props, classes) {
 				<Box mt={2}>
 					<Card className={props.classes.card}>
 						<CardMedia>
-							<Button
-								className={props.classes.buttonge}
-								href='http://localhost:3000/'
-							>
+							<Button className={props.classes.buttonge} href='/'>
 								<ArrowBackIcon className={props.classes.buttonback} />
 							</Button>
 
@@ -105,9 +102,6 @@ function PropertyDetails(props, classes) {
 									<CardMedia
 										className={props.classes.media}
 										key={index}
-										image={image}
-										image={image}
-										image={image}
 										image={image}
 										alt='property-images'
 										component='img'
@@ -177,7 +171,10 @@ function PropertyDetails(props, classes) {
 												{property.agentID ? property.agentID.phone : 'No Found'}
 											</Item>
 											<Item>
-												{(user && (
+												{(user && user.role === 'AGENT') ||
+												(user && user.role === 'ADMIN') ? (
+													<> </>
+												) : user && user.role === 'CLIENT' ? (
 													<div>
 														<Button
 															onClick={() =>
@@ -190,7 +187,7 @@ function PropertyDetails(props, classes) {
 																	})
 																	.catch((err) => {
 																		handleOpen(
-																			`😔 ${user.name} Lo sentimos, no se pudo agregar la propiedad a tus favoritos 😔 intenta mas tarde`
+																			`  ${user.name} Esta propiedad ya fue agregada a tus favoritos, por favor intenta con otra propiedad`
 																		);
 																	})
 															}
@@ -224,7 +221,7 @@ function PropertyDetails(props, classes) {
 															</Box>
 														</Modal>
 													</div>
-												)) || (
+												) : (
 													<div>
 														<span>
 															Para añadir a favoritos debes iniciar sesión

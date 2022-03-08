@@ -9,16 +9,18 @@ import {
 
 const Listreviews = ({ reviews, classes }) => {
 	return (
-		<Card>
-			<Typography className={classes.title}>
-				Opiniones de los usuarios
-			</Typography>
-			<CardActionArea>
-				{reviews.map((review) => {
-					return <CardReviews key={review.id} review={review} />;
-				})}
-			</CardActionArea>
-		</Card>
+		<div className={classes.contenedor}>
+			<Card>
+				<Typography className={classes.title}>
+					Opiniones de los usuarios
+				</Typography>
+				<CardActionArea>
+					{reviews.map((review) => {
+						return <CardReviews key={review.id} review={review} />;
+					})}
+				</CardActionArea>
+			</Card>
+		</div>
 	);
 };
 
