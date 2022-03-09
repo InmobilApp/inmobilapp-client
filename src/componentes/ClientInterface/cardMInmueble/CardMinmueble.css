@@ -15,15 +15,18 @@
     font-size: 40px;
 }
 
+
+
 .container_card{
     display: flex;
     background-color:white;
     height:250px;
     padding: 20px;
     border-radius: 20px;
-    width: 1130px;
+    width: 1230px;
     box-shadow: 5px 5px 5px #faa422;
-
+    
+    
 }
 
 .container_card img{
