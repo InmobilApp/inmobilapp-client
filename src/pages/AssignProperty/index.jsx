@@ -15,14 +15,14 @@ import axios from "axios";
 import styled from "./AssingProperty.module.css";
 
 export default function AssignProperty() {
-  const { clientID, propertyID } = useParams();
+  const { clientID, propertyID, agentID } = useParams();
   const [agentDetail, setAgentDetail] = useState(null);
   const [send, setSend] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
     const user = getUserForLocalStorage();
-    if (user === null || user.role !== "AGENT") {
+    if (user === null || user.role !== "AGENT" || user.id != agentID) {
       swal("No tienes permisos");
       return navigate("/");
     }

@@ -76,7 +76,7 @@ function App() {
           <Route path="/reseProperty" element={<ReseñaProperty />} />
           <Route path="/preguntasFrecuentes" element={<Generales />} />
           <Route
-            path="/assignproperty/:clientID/:propertyID"
+            path="/assignproperty/:clientID/:propertyID/:agentID"
             element={<AssignProperty />}
           />
           <Route path="/payment" element={<Payment />} />
