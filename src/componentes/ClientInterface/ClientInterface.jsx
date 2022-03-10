@@ -88,7 +88,6 @@ export const ClientInterface = () => {
                 <BotonUp openMenu={openMenu} />
               )}
               <span>Nombre del propietario: {user.name}</span>
-              <span>Dia de pago: {user.payDay} del mes presente</span>
             </div>
             {openI && <CardMinmueble />}
           </>
